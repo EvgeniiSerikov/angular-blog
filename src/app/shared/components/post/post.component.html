@@ -1,15 +1,15 @@
 <div class="card">
   <div class="card-header">
-    <h2>Post Title</h2>
-    <small>12.09.2019</small>
+    <h2>{{ postTypeScript.title }}</h2>
+    <small>{{ postTypeScript.date | date:"dd.MM.yyyy" }}</small>
   </div>
 
   <div class="">
-    <small>Vladilen</small>
+    <small>{{ postTypeScript.author }}</small>
   </div>
 
   <button
-    [routerLink]="['/post',1231]"
+    [routerLink]="['/post', postTypeScript.id]"
     class="btn btn-dark"
   >
     Открыть
